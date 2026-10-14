@@ -21,11 +21,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Raven — I predict what the market hasn't priced yet</title>
-<meta name="description" content="Raven is an AI-powered prediction platform for cryptocurrency markets and Polymarket events. 98.6% price prediction accuracy powered by advanced fine-tuned models.">
+<meta name="description" content="Raven forecasts crypto and prediction markets. Every call comes with a probability and a written reason, and is scored against the odds the market already implies.">
 
 <!-- Open Graph -->
 <meta property="og:title" content="Raven — AI-Powered Market Predictions">
-<meta property="og:description" content="I predict what the market hasn't priced yet. 98.6% accuracy in crypto price prediction.">
+<meta property="og:description" content="I predict what the market hasn't priced yet. Every forecast comes with a probability and a written reason.">
 <meta property="og:type" content="website">
 
 <!-- Fonts -->
@@ -86,7 +86,7 @@
     <div class="nav-links">
       <a href="#features" class="nav-link" data-magnetic>Features</a>
       <a href="#predictions" class="nav-link" data-magnetic>Predictions</a>
-      <a href="#benchmark" class="nav-link" data-magnetic>Benchmark</a>
+      <a href="#how-we-measure" class="nav-link" data-magnetic>How we measure</a>
       <a href="#polymarket" class="nav-link" data-magnetic>Polymarket</a>
     </div>
     <div class="nav-actions">
@@ -107,7 +107,7 @@
   <div class="mobile-nav-links">
     <a href="#features" class="mobile-nav-link">Features</a>
     <a href="#predictions" class="mobile-nav-link">Predictions</a>
-    <a href="#benchmark" class="mobile-nav-link">Benchmark</a>
+    <a href="#how-we-measure" class="mobile-nav-link">How we measure</a>
     <a href="#polymarket" class="mobile-nav-link">Polymarket</a>
     <a href="https://www.raven-agent.com/" class="btn btn-primary mobile-cta" target="_blank" rel="noopener noreferrer">Launch App</a>
   </div>
@@ -124,32 +124,32 @@
       I predict what the market hasn't <span class="hero-accent">priced yet.</span>
     </h1>
     <p class="hero-sub">
-      Raven sees patterns invisible to human traders. 98.6% price prediction accuracy 
-      powered by fine-tuned reasoning models analyzing real-time market data.
+      Raven forecasts crypto and prediction markets. Every call comes with a probability
+      and a written reason, and is scored against the odds the market already implies.
     </p>
     <div class="hero-cta-group">
       <a href="https://www.raven-agent.com/" class="btn btn-primary btn-lg" data-magnetic target="_blank" rel="noopener noreferrer">
         <span>Start Predicting</span>
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
-      <a href="#benchmark" class="btn btn-ghost btn-lg" data-magnetic>
-        <span>View Benchmarks</span>
+      <a href="#how-we-measure" class="btn btn-ghost btn-lg" data-magnetic>
+        <span>How we measure</span>
       </a>
     </div>
     <div class="hero-stats">
-      <div class="hero-stat">
-        <span class="hero-stat-value" data-count="98.6">0</span><span class="hero-stat-unit">%</span>
-        <span class="hero-stat-label">Price Accuracy</span>
+      <div class="hero-stat hero-stat-fact">
+        <span class="hero-stat-value">Brier-scored</span>
+        <span class="hero-stat-label">Every forecast is graded on calibration</span>
       </div>
       <div class="hero-stat-divider"></div>
-      <div class="hero-stat">
-        <span class="hero-stat-value" data-count="94.7">0</span><span class="hero-stat-unit">%</span>
-        <span class="hero-stat-label">Direction Accuracy</span>
+      <div class="hero-stat hero-stat-fact">
+        <span class="hero-stat-value">Market baseline</span>
+        <span class="hero-stat-label">Compared with the odds the market already implies</span>
       </div>
       <div class="hero-stat-divider"></div>
-      <div class="hero-stat">
-        <span class="hero-stat-value" data-count="1">&lt;1</span><span class="hero-stat-unit">s</span>
-        <span class="hero-stat-label">Per Prediction</span>
+      <div class="hero-stat hero-stat-fact">
+        <span class="hero-stat-value">Paper trading</span>
+        <span class="hero-stat-label">Live, before any real money</span>
       </div>
     </div>
   </div>
@@ -165,7 +165,7 @@
     <div class="section-header">
       <span class="section-tag">Capabilities</span>
       <h2 class="section-title reveal-up">What Raven Sees</h2>
-      <p class="section-sub reveal-up">Four distinct analysis modes powering predictions that traditional models miss entirely.</p>
+      <p class="section-sub reveal-up">Four analysis modes behind every Raven forecast.</p>
     </div>
 
     <div class="features-grid">
@@ -175,7 +175,7 @@
           <i data-lucide="trending-up"></i>
         </div>
         <h3 class="feature-title">Price Forecasting</h3>
-        <p class="feature-desc">Multi-timeframe price predictions with 98.6% accuracy. From 4-hour windows to weekly outlooks, Raven maps probable price trajectories before the market moves.</p>
+        <p class="feature-desc">Multi-timeframe price forecasts, from 4-hour windows to weekly outlooks, each with a probability and a reason.</p>
         <div class="feature-status active">Active</div>
         <div class="feature-visual">
           <svg class="price-chart-svg" viewBox="0 0 400 200" fill="none">
@@ -201,7 +201,7 @@
           <i data-lucide="brain"></i>
         </div>
         <h3 class="feature-title">Sentiment Analysis</h3>
-        <p class="feature-desc">Real-time social and market sentiment decoded from 150+ data sources. Understand crowd psychology before it moves the market.</p>
+        <p class="feature-desc">Market sentiment read from news, social and on-chain data. Understand crowd psychology before it moves the market.</p>
         <div class="feature-status active">Active</div>
       </div>
 
@@ -232,9 +232,9 @@
 <section class="section predictions" id="predictions">
   <div class="container">
     <div class="section-header">
-      <span class="section-tag">Live Interface</span>
+      <span class="section-tag">Example Interface</span>
       <h2 class="section-title reveal-up">Ask Raven Anything</h2>
-      <p class="section-sub reveal-up">Natural language queries decoded into precise market intelligence. Try these examples.</p>
+      <p class="section-sub reveal-up">Ask in plain language. These are example questions with illustrative answers, not live forecasts.</p>
     </div>
 
     <div class="prediction-demo">
@@ -259,7 +259,7 @@
       <div class="demo-response">
         <div class="demo-response-header">
           <span class="demo-response-badge">Raven</span>
-          <span class="demo-response-time">Response in &lt;1s</span>
+          <span class="demo-response-time">Answers in seconds</span>
         </div>
         <div class="demo-response-body" id="demo-response-body">
           <div class="typing-indicator">
@@ -276,85 +276,40 @@
   </div>
 </section>
 
-<!-- ======== BENCHMARK SECTION ======== -->
-<section class="section benchmark" id="benchmark">
+<!-- ======== HOW WE MEASURE SECTION ======== -->
+<!-- Legacy anchor so old #benchmark links still land here -->
+<div id="benchmark" aria-hidden="true"></div>
+<section class="section benchmark" id="how-we-measure">
   <div class="container">
     <div class="section-header">
-      <span class="section-tag">Performance</span>
-      <h2 class="section-title reveal-up">Benchmark Results</h2>
-      <p class="section-sub reveal-up">Built on Sota-Gpt-oss-20b with Adaptive LoRA fine-tuning. Only 0.1% trainable parameters — 21M vs 20B base model.</p>
+      <span class="section-tag">Methodology</span>
+      <h2 class="section-title reveal-up">How we measure</h2>
+      <p class="section-sub reveal-up">Built on gpt-oss-20b, fine-tuned with LoRA. Here is how we grade it.</p>
     </div>
 
     <div class="benchmark-grid">
-      <div class="bench-card bench-card-hero">
-        <div class="bench-ring" data-value="98.6">
-          <svg viewBox="0 0 200 200">
-            <circle cx="100" cy="100" r="88" stroke="rgba(255,255,255,0.06)" stroke-width="6" fill="none"/>
-            <circle class="bench-ring-fill" cx="100" cy="100" r="88" stroke="url(#ringGrad)" stroke-width="6" fill="none" stroke-linecap="round"
-              stroke-dasharray="553" stroke-dashoffset="553" transform="rotate(-90 100 100)"/>
-            <defs>
-              <linearGradient id="ringGrad" x1="0" y1="0" x2="200" y2="200">
-                <stop offset="0%" stop-color="#00f0ff"/>
-                <stop offset="100%" stop-color="#7c3aed"/>
-              </linearGradient>
-            </defs>
-          </svg>
-          <div class="bench-ring-value">
-            <span class="bench-ring-number" data-count="98.6">0</span>
-            <span class="bench-ring-unit">%</span>
-          </div>
-        </div>
-        <h3 class="bench-label">Price Prediction Accuracy</h3>
-        <p class="bench-desc">Industry-leading performance on live Bitcoin market predictions</p>
+      <div class="bench-card">
+        <div class="bench-icon"><i data-lucide="history"></i></div>
+        <h3 class="bench-label">Point-in-time data</h3>
+        <p class="bench-desc">Backtests only use what was known at the time.</p>
       </div>
 
       <div class="bench-card">
-        <div class="bench-bar">
-          <div class="bench-bar-fill" data-width="94.7"></div>
-        </div>
-        <div class="bench-card-content">
-          <span class="bench-value" data-count="94.7">0</span><span class="bench-unit">%</span>
-          <h3 class="bench-label">Direction Accuracy</h3>
-          <p class="bench-desc">Within ±1% of actual price direction</p>
-        </div>
+        <div class="bench-icon"><i data-lucide="target"></i></div>
+        <h3 class="bench-label">Brier score and calibration</h3>
+        <p class="bench-desc">When Raven says 70%, it should happen about 70% of the time. That's what we grade.</p>
       </div>
 
       <div class="bench-card">
-        <div class="bench-bar">
-          <div class="bench-bar-fill" data-width="80.9"></div>
-        </div>
-        <div class="bench-card-content">
-          <span class="bench-value" data-count="80.9">0</span><span class="bench-unit">%</span>
-          <h3 class="bench-label">Logic Score</h3>
-          <p class="bench-desc">Reasoning coherence evaluation score</p>
-        </div>
+        <div class="bench-icon"><i data-lucide="scale"></i></div>
+        <h3 class="bench-label">Market baseline</h3>
+        <p class="bench-desc">Every forecast is compared with the probability the market already implies.</p>
       </div>
 
       <div class="bench-card">
-        <div class="bench-bar">
-          <div class="bench-bar-fill" data-width="63"></div>
-        </div>
-        <div class="bench-card-content">
-          <span class="bench-value" data-count="0.630">0</span>
-          <h3 class="bench-label">BERT F1 Score</h3>
-          <p class="bench-desc">Semantic similarity evaluation metric</p>
-        </div>
-      </div>
-
-      <div class="bench-card">
-        <div class="bench-number-highlight">150/150</div>
-        <div class="bench-card-content">
-          <h3 class="bench-label">Posts Processed</h3>
-          <p class="bench-desc">100% completion on LunarCrush API live data</p>
-        </div>
-      </div>
-
-      <div class="bench-card">
-        <div class="bench-number-highlight">&lt;1s</div>
-        <div class="bench-card-content">
-          <h3 class="bench-label">Processing Speed</h3>
-          <p class="bench-desc">Per-prediction inference time in production</p>
-        </div>
+        <div class="bench-icon"><i data-lucide="flask-conical"></i></div>
+        <h3 class="bench-label">Status</h3>
+        <p class="bench-desc">Raven is in live paper trading. We'll publish results once the out-of-sample period is complete.</p>
       </div>
     </div>
   </div>
@@ -364,7 +319,7 @@
 <section class="section polymarket" id="polymarket">
   <div class="container">
     <div class="section-header">
-      <span class="section-tag">Event Predictions</span>
+      <span class="section-tag">Example questions</span>
       <h2 class="section-title reveal-up">Polymarket Intelligence</h2>
       <p class="section-sub reveal-up">Real-world event predictions analyzed through Raven's reasoning engine. Quantifying probability where others see uncertainty.</p>
     </div>
@@ -372,58 +327,25 @@
     <div class="poly-grid">
       <div class="poly-card">
         <div class="poly-card-header">
-          <span class="poly-category">Geopolitics</span>
-          <span class="poly-volume">$25M Vol</span>
-        </div>
-        <h3 class="poly-title">Russia x Ukraine Ceasefire by End of 2025</h3>
-        <div class="poly-odds">
-          <div class="poly-odd poly-yes" style="--odd-width: 2%">
-            <span class="poly-odd-label">Yes</span>
-            <span class="poly-odd-value">2%</span>
-          </div>
-          <div class="poly-odd poly-no" style="--odd-width: 98%">
-            <span class="poly-odd-label">No</span>
-            <span class="poly-odd-value">98%</span>
-          </div>
-        </div>
-        <a href="https://www.raven-agent.com/polymarket" class="poly-cta" target="_blank" rel="noopener noreferrer">Ask Raven <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-      </div>
-
-      <div class="poly-card">
-        <div class="poly-card-header">
-          <span class="poly-category">Sports</span>
-          <span class="poly-volume">$341M Vol</span>
-        </div>
-        <h3 class="poly-title">English Premier League Winner 2025</h3>
-        <div class="poly-odds">
-          <div class="poly-odd poly-yes" style="--odd-width: 45%">
-            <span class="poly-odd-label">Liverpool</span>
-            <span class="poly-odd-value">45%</span>
-          </div>
-          <div class="poly-odd poly-no" style="--odd-width: 55%">
-            <span class="poly-odd-label">Others</span>
-            <span class="poly-odd-value">55%</span>
-          </div>
-        </div>
-        <a href="https://www.raven-agent.com/polymarket" class="poly-cta" target="_blank" rel="noopener noreferrer">Ask Raven <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-      </div>
-
-      <div class="poly-card">
-        <div class="poly-card-header">
           <span class="poly-category">Politics</span>
-          <span class="poly-volume">$823M Vol</span>
         </div>
-        <h3 class="poly-title">Democratic Presidential Nominee 2028</h3>
-        <div class="poly-odds">
-          <div class="poly-odd poly-yes" style="--odd-width: 22%">
-            <span class="poly-odd-label">Leading</span>
-            <span class="poly-odd-value">22%</span>
-          </div>
-          <div class="poly-odd poly-no" style="--odd-width: 78%">
-            <span class="poly-odd-label">Field</span>
-            <span class="poly-odd-value">78%</span>
-          </div>
+        <h3 class="poly-title">Republican Presidential Nominee 2028</h3>
+        <a href="https://www.raven-agent.com/polymarket" class="poly-cta" target="_blank" rel="noopener noreferrer">Ask Raven <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+
+      <div class="poly-card">
+        <div class="poly-card-header">
+          <span class="poly-category">Elections</span>
         </div>
+        <h3 class="poly-title">Which party will win the House in 2026?</h3>
+        <a href="https://www.raven-agent.com/polymarket" class="poly-cta" target="_blank" rel="noopener noreferrer">Ask Raven <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+
+      <div class="poly-card">
+        <div class="poly-card-header">
+          <span class="poly-category">Economy</span>
+        </div>
+        <h3 class="poly-title">How many Fed rate cuts in 2026?</h3>
         <a href="https://www.raven-agent.com/polymarket" class="poly-cta" target="_blank" rel="noopener noreferrer">Ask Raven <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
     </div>
@@ -436,7 +358,7 @@
     <div class="cta-card">
       <div class="cta-bg-pattern"></div>
       <h2 class="cta-title reveal-up">Ready to see what<br>others can't?</h2>
-      <p class="cta-sub reveal-up">Join the traders who trust Raven to find alpha in the noise.</p>
+      <p class="cta-sub reveal-up">Ask Raven your first question.</p>
       <div class="cta-buttons reveal-up">
         <a href="https://www.raven-agent.com/" class="btn btn-primary btn-lg" data-magnetic target="_blank" rel="noopener noreferrer">
           <span>Launch Raven</span>
@@ -471,7 +393,7 @@
         </svg>
         <span>Raven</span>
       </div>
-      <p class="footer-copy">&copy; 2025 Raven. All rights reserved.</p>
+      <p class="footer-copy">&copy; 2026 Raven. All rights reserved.</p>
       <a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener noreferrer" class="footer-attribution">
         Created with Perplexity Computer
       </a>

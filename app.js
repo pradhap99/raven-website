@@ -289,21 +289,6 @@ window.addEventListener('DOMContentLoaded', () => {
     duration: 1,
     ease: 'power2.out'
   }, '-=0.2');
-
-  // Animate stat numbers
-  document.querySelectorAll('[data-count]').forEach(el => {
-    const target = parseFloat(el.dataset.count);
-    const isDecimal = target % 1 !== 0;
-    gsap.to({ val: 0 }, {
-      val: target,
-      duration: 2,
-      delay: 1.5,
-      ease: 'power2.out',
-      onUpdate: function() {
-        el.textContent = isDecimal ? this.targets()[0].val.toFixed(1) : Math.round(this.targets()[0].val);
-      }
-    });
-  });
 });
 
 
@@ -356,11 +341,13 @@ gsap.from('.feature-card', {
 
 
 // ============ DEMO RESPONSE TYPEWRITER ============
+const EXAMPLE_NOTE = '<em>Illustrative example, not a live forecast.</em><br><br>';
+
 const responses = [
-  `<strong>BTC 4-Hour Price Forecast</strong><br><br>Based on current market analysis, momentum indicators, and sentiment data:<br><br>• <strong>Current Price:</strong> $67,245<br>• <strong>Predicted (4h):</strong> $67,890 (+0.96%)<br>• <strong>Confidence:</strong> 94.2%<br>• <strong>Direction:</strong> Bullish<br><br>Key drivers: Increasing institutional volume, positive funding rates, and strong support at $66,800.`,
-  `<strong>ETH Sentiment Analysis</strong><br><br>Overall market sentiment for Ethereum is currently <span style="color: var(--color-success)">moderately bullish</span>.<br><br>• <strong>Social Score:</strong> 72/100 (positive)<br>• <strong>Fear & Greed:</strong> 65 (Greed)<br>• <strong>Whale Activity:</strong> Accumulation phase<br><br>Notable signals: Strong developer activity on L2s, increasing staking deposits, and positive commentary from institutional analysts.`,
-  `<strong>Bitcoin Decline Analysis</strong><br><br>The recent Bitcoin correction is driven by three converging factors:<br><br>1. <strong>Macro Pressure:</strong> Fed hawkish signals dampening risk appetite<br>2. <strong>Miner Selling:</strong> Post-halving cost pressure forcing liquidations<br>3. <strong>Leverage Flush:</strong> $2.3B in long positions liquidated in 72 hours<br><br>Historical pattern suggests recovery within 2-3 weeks based on similar setups.`,
-  `<strong>Bitcoin Investment Analysis</strong><br><br>Current risk-reward assessment:<br><br>• <strong>Signal:</strong> <span style="color: var(--color-warning)">Cautious Accumulate</span><br>• <strong>Time Horizon:</strong> 6-12 months favorable<br>• <strong>Key Level:</strong> DCA zone between $62K-$68K<br><br>Raven's model suggests current prices are within the accumulation zone for medium-term holders. Short-term volatility expected.`
+  `<strong>BTC 4-Hour Forecast</strong><br>${EXAMPLE_NOTE}Every Raven forecast has the same shape:<br><br>• <strong>Call:</strong> the probability that BTC is higher in 4 hours<br>• <strong>Reason:</strong> the momentum, sentiment and on-chain signals behind it<br>• <strong>Market baseline:</strong> the probability the market already implies<br><br>Ask in the app for the current forecast.`,
+  `<strong>ETH Sentiment</strong><br>${EXAMPLE_NOTE}A sentiment answer summarizes:<br><br>• <strong>Social:</strong> the tone of recent posts and news<br>• <strong>On-chain:</strong> what large holders are doing<br>• <strong>Read:</strong> bullish, neutral or bearish, with the reason<br><br>Sentiment is an input to the forecast, not a prediction on its own.`,
+  `<strong>Why is Bitcoin falling?</strong><br>${EXAMPLE_NOTE}Raven answers with a written reason, not just a number:<br><br>1. <strong>Macro:</strong> rate expectations and risk appetite<br>2. <strong>Flows:</strong> exchange and miner activity<br>3. <strong>Positioning:</strong> leverage and liquidations<br><br>Each driver comes with a reason, and the overall call comes with a probability.`,
+  `<strong>Should I invest in Bitcoin now?</strong><br>${EXAMPLE_NOTE}Raven forecasts probabilities, it isn't financial advice. You get:<br><br>• <strong>A probability</strong> for the move you care about, over the timeframe you pick<br>• <strong>A written reason</strong> for that probability<br>• <strong>The market baseline</strong> to compare it with<br><br>What you do with it is your decision.`
 ];
 
 const demoPrompts = document.querySelectorAll('.demo-prompt');
@@ -388,64 +375,6 @@ demoPrompts.forEach((prompt, i) => {
 
 // Init first response
 setTimeout(() => typeResponse(0), 2000);
-
-
-// ============ BENCHMARK RING ANIMATION ============
-ScrollTrigger.create({
-  trigger: '.benchmark',
-  start: 'top 60%',
-  onEnter: () => {
-    // Animate ring
-    const circumference = 2 * Math.PI * 88; // ~553
-    const target = 98.6;
-    const offset = circumference - (circumference * target / 100);
-
-    gsap.to('.bench-ring-fill', {
-      strokeDashoffset: offset,
-      duration: 2,
-      ease: 'power2.out'
-    });
-
-    // Animate ring number
-    gsap.to({ val: 0 }, {
-      val: 98.6,
-      duration: 2,
-      ease: 'power2.out',
-      onUpdate: function() {
-        document.querySelectorAll('.bench-ring-number').forEach(el => {
-          el.textContent = this.targets()[0].val.toFixed(1);
-        });
-      }
-    });
-
-    // Animate bars
-    document.querySelectorAll('.bench-bar-fill').forEach(bar => {
-      const width = bar.dataset.width;
-      gsap.to(bar, {
-        width: width + '%',
-        duration: 1.5,
-        delay: 0.3,
-        ease: 'power2.out'
-      });
-    });
-
-    // Animate bench values
-    document.querySelectorAll('.bench-value').forEach(el => {
-      const target = parseFloat(el.dataset.count);
-      const isSmall = target < 1;
-      gsap.to({ val: 0 }, {
-        val: target,
-        duration: 1.5,
-        delay: 0.5,
-        ease: 'power2.out',
-        onUpdate: function() {
-          el.textContent = isSmall ? this.targets()[0].val.toFixed(3) : this.targets()[0].val.toFixed(1);
-        }
-      });
-    });
-  },
-  once: true
-});
 
 
 // ============ BENCHMARK CARDS STAGGER ============
